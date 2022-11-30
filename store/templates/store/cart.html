@@ -10,7 +10,7 @@
             <br>
             <br>
 
-            <table class="table">
+            <table class="table table-hover">
                 <tr>
                     <th><h5>Items: <strong>{{order.get_cart_items}}</strong></h5></th>
                     <th><h5>Total: <strong>${{order.get_cart_total|floatformat:2}}</strong></h5></th>
@@ -23,7 +23,7 @@
         </div>
         <br>
 
-        <div class="box-element">
+        <div class="box-element ">
             <div class="cart-row">
                 <div style="flex:2"></div>
                 <div style="flex:2"><strong>Item</strong></div>
@@ -33,8 +33,8 @@
             </div>
 
             {% for item in items %}
-            <div class="cart-row">
-                <div style="flex:2"><img class="row-image" src="{{item.product.imageURL}}"></div>
+            <div class="cart-row card-table">
+                <div class="card-image" style="flex:2" ><img class="row-image" src="{{item.product.imageURL}}"></div>
                 <div style="flex:2">{{item.product.name}}</div>
                 <div style="flex:1">${{item.product.price|floatformat:2}}</div>
                 <div style="flex:1">
