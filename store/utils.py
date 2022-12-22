@@ -33,7 +33,7 @@ def cookieCart(request):
 				'digital':product.digital,'get_total':total,
 				}
 				items.append(item)
-
+				
 				if product.digital == False:
 					order['shipping'] = True
 		except:
